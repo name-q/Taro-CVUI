@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base",
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "global.d.ts", "types"],
+    "paths": {
+      "taro-cvui": ["src/index.ts"]
+    }
+  }
+}
