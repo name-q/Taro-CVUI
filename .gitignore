@@ -1,14 +1,26 @@
-dist/
+# Node modules
 node_modules/
 
-yarn.lock
+# Yarn and NPM files
+yarn-error.log
 package-lock.json
-project.config.json
 
+# Template files
 .temp
-.eslintcache
 .DS_Store
-.babelrc
+.eslintcache
 
 .vscode
 
+# Build outputs
+dist/
+
+# Docs outputs
+site/
+docs/h5/
+
+# Rollup visualizer file
+stats.html
+
+# Test files
+coverage

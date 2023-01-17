@@ -9,9 +9,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveConstEnums": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "target": "es5",
+    "module": "es6",
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "types": ["node"]
   },
-  "compileOnSave": false
+  "compileOnSave": false,
+  "exclude": ["node_modules/*", "packages/dist/*"],
+  "extends": "../../tsconfig.build",
+  "include": ["src/**/*"]
 }

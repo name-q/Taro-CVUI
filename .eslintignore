@@ -1,10 +1,18 @@
+# Node modules
 node_modules/
+
+.vscode
+
+# Build outputs
 dist/
-coverage/
-.vscode/
+
+# Test files
+coverage
+jest.config.js
+test/__mock__/
+
+# Others
 .nyc_output/
 git_stats/
 yarn-offline/
 docs/
-jest.config.js
-test/__mock__/
