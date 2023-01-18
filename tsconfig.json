@@ -19,5 +19,5 @@
     "typeRoots": ["node_modules/@types", "types"]
   },
   "compileOnSave": false,
-  "exclude": ["node_modules/*", "packages/dist/*"]
+  "exclude": ["node_modules/*", "dist/*"]
 }
