@@ -1,5 +1,5 @@
 {
-  "extends": ["o2team", "taro", "plugin:prettier/recommended"],
+  "extends": ["o2team", "eslint:recommended", "plugin:prettier/recommended"],
   "parser": "babel-eslint",
   "env": {
     "jest": true
