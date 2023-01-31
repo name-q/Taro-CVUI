@@ -1,4 +1,5 @@
 import NodePath from 'path'
+import includePaths from 'rollup-plugin-includepaths'
 import RollupJson from '@rollup/plugin-json'
 import RollupNodeResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
@@ -18,6 +19,14 @@ const externalPackages = [
   '@tarojs/react'
 ]
 
+// 需要映射tsconfig.absolute.path.json中的绝对路径
+const includePathOptions = {
+  include: {},
+  paths: ['./', 'src'],
+  external: ['dist', 'lib', 'node_modules', 'config'],
+  extensions: ['.js', '.json', '.html', 'scss', 'sass', 'ts', 'tsx']
+}
+
 export default {
   input: resolveFile(Package.source),
   output: [
@@ -34,6 +43,7 @@ export default {
   ],
   external: externalPackages,
   plugins: [
+    includePaths(includePathOptions),
     RollupNodeResolve({
       customResolveOptions: {
         moduleDirectory: 'node_modules'
